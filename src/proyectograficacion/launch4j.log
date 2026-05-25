@@ -1,0 +1,19 @@
+
+
+Version:	3.50
+CmdLine:	D:\ProyectoGraficacion\ProyectoGraficacion1.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\ProyectoGraficacion\.
+Requires JDK:	Yes
+Requires 64-Bit: No
+Java min ver:	1.008.000
+Java max ver:	
+JRE paths:	C:\Program Files (x86)\Java\jdk1.8.0_202
+Check launcher:	C:\Program Files (x86)\Java\jdk1.8.0_202\bin\javaw.exe (OK)
+Check javac:	C:\Program Files (x86)\Java\jdk1.8.0_202\bin\javac.exe (OK)
+Version string: 1.008.000_202 / 32-Bit (OK)
+Launcher:	C:\Program Files (x86)\Java\jdk1.8.0_202\bin\javaw.exe
+Launcher args:	-jar "D:\ProyectoGraficacion\ProyectoGraficacion1.exe"
+Args length:	54/32768 chars
+Exit code:	0
