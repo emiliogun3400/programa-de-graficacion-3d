@@ -12,7 +12,8 @@ public class GraficadorApp extends JFrame {
     private static final Color NETBEANS_CUBE_COLOR = new Color(180, 200, 255);
 
     public GraficadorApp() {
-        setTitle("MENÚ 3D - DIRECTAS E INVERSAS");
+        // Actualizamos el título de la ventana
+        setTitle("MENÚ 3D - BÁSICAS E INVERSAS");
         setSize(700, 680); 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
         setLocationRelativeTo(null);
@@ -39,14 +40,11 @@ public class GraficadorApp extends JFrame {
 
         mainPanel.add(Box.createRigidArea(new Dimension(0, 20)));
 
-        // --- CONTENEDOR PARA LAS DOS COLUMNAS DE BOTONES ---
         JPanel gridPanel = new JPanel(new GridLayout(1, 2, 20, 0));
         gridPanel.setBackground(new Color(245, 245, 245));
-        
-        // AQUÍ ESTÁ LA SOLUCIÓN: Limitamos el tamaño máximo para que no se estiren
         gridPanel.setMaximumSize(new Dimension(600, 340)); 
 
-        // COLUMNA IZQUIERDA: INVERSAS
+        // COLUMNA IZQUIERDA: INVERSAS (Intacta)
         JPanel panelInversas = new JPanel(new GridLayout(5, 1, 0, 10));
         panelInversas.setBackground(new Color(245, 245, 245));
         panelInversas.setBorder(BorderFactory.createTitledBorder(null, "MÉTODOS INVERSOS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new Font("Segoe UI", Font.BOLD, 12), Color.DARK_GRAY));
@@ -57,28 +55,24 @@ public class GraficadorApp extends JFrame {
         panelInversas.add(crearBoton("4. Rotación Y Inv.", "RotYInv", new Color(100, 60, 200)));
         panelInversas.add(crearBoton("5. Rotación Z Inv.", "RotZInv", new Color(100, 60, 200)));
 
-        // COLUMNA DERECHA: DIRECTAS
-        JPanel panelDirectas = new JPanel(new GridLayout(5, 1, 0, 10));
-        panelDirectas.setBackground(new Color(245, 245, 245));
-        panelDirectas.setBorder(BorderFactory.createTitledBorder(null, "MÉTODOS DIRECTOS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new Font("Segoe UI", Font.BOLD, 12), Color.DARK_GRAY));
+        // --- COLUMNA DERECHA: BÁSICAS (Textos actualizados) ---
+        JPanel panelBasicas = new JPanel(new GridLayout(5, 1, 0, 10));
+        panelBasicas.setBackground(new Color(245, 245, 245));
+        panelBasicas.setBorder(BorderFactory.createTitledBorder(null, "MÉTODOS BÁSICOS", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP, new Font("Segoe UI", Font.BOLD, 12), Color.DARK_GRAY));
 
-        panelDirectas.add(crearBoton("6. Traslación Dir.", "TrasDir", new Color(60, 140, 200)));
-        panelDirectas.add(crearBoton("7. Escalación Dir.", "EscDir", new Color(220, 120, 40)));
-        panelDirectas.add(crearBoton("8. Rotación X Dir.", "RotXDir", new Color(140, 100, 220)));
-        panelDirectas.add(crearBoton("9. Rotación Y Dir.", "RotYDir", new Color(140, 100, 220)));
-        panelDirectas.add(crearBoton("10. Rotación Z Dir.", "RotZDir", new Color(140, 100, 220)));
+        panelBasicas.add(crearBoton("6. Traslación Básica", "TrasDir", new Color(60, 140, 200)));
+        panelBasicas.add(crearBoton("7. Escalación Básica", "EscDir", new Color(220, 120, 40)));
+        panelBasicas.add(crearBoton("8. Rotación X Básica", "RotXDir", new Color(140, 100, 220)));
+        panelBasicas.add(crearBoton("9. Rotación Y Básica", "RotYDir", new Color(140, 100, 220)));
+        panelBasicas.add(crearBoton("10. Rotación Z Básica", "RotZDir", new Color(140, 100, 220)));
 
         gridPanel.add(panelInversas);
-        gridPanel.add(panelDirectas);
+        gridPanel.add(panelBasicas);
 
         mainPanel.add(gridPanel);
-        
-        // Empuja los botones hacia arriba para que el espacio sobrante quede en blanco
         mainPanel.add(Box.createVerticalGlue()); 
-        
         add(mainPanel, BorderLayout.CENTER);
 
-        // --- PANEL DE ABAJO (Botones de regreso y créditos) ---
         JPanel bottomPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 15, 10));
         bottomPanel.setBackground(new Color(245, 245, 245));
 
